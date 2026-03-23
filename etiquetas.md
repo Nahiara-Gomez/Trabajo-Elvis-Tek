@@ -52,4 +52,5 @@ Forma de usar:
 Se usa para citar un bloque de texto
 -`<q>...</q>`: Hace citas cortas con comillas ("cita").
 
+- `<center>`: Permite que un texto este con formato centrado
 
