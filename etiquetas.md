@@ -52,4 +52,18 @@ Forma de usar:
 Se usa para citar un bloque de texto
 -`<q>...</q>`: Hace citas cortas con comillas ("cita").
 
+- `<cite>...</cite>`: Referencia a titulos. . .
 
+- `<span>...<span>`: Texto breve
+
+- `<figure>...</figure>´ & `<figcaption>...<figcaption>`: Sirve para añadir una descripcion a una imagen y que sea visible
+
+- `<br>`: Salto de linea 
+
+- `<hr>`: linea horizona
+
+- `<ol>...</ol>`
+
+- `<ul>...</ul>`
+
+- `<li>...</li>`
