@@ -52,5 +52,22 @@ Forma de usar:
 Se usa para citar un bloque de texto
 -`<q>...</q>`: Hace citas cortas con comillas ("cita").
 
+<<<<<<< HEAD
 - `<center>`: Permite que un texto este con formato centrado
+=======
+- `<cite>...</cite>`: Referencia a titulos. . .
+>>>>>>> f3c6645c5f96818db8539730dae26ad6bf966bbf
 
+- `<span>...<span>`: Texto breve
+
+- `<figure>...</figure>´ & `<figcaption>...<figcaption>`: Sirve para añadir una descripcion a una imagen y que sea visible
+
+- `<br>`: Salto de linea 
+
+- `<hr>`: linea horizona
+
+- `<ol>...</ol>`
+
+- `<ul>...</ul>`
+
+- `<li>...</li>`
