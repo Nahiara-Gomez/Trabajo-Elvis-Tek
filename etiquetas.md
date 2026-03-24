@@ -1,4 +1,5 @@
 # Etiquetas relevantes
+
 - `<!DOCTYPE html>`: Etiqueta princpal, indica que es una pagina de tipo HTML.
 
 - `<html>...</html>`: Almacena todo el contenido de la pagina, incluyendo lo visual y los metadatos. Se utiliza la etiqueta `lang` para indicar el lenguaje de la pagina.
@@ -16,10 +17,14 @@
 - `<img src="..." alt="...">`: Te permite subir una imagen ya descargada o el link de esta misma. Adentro de `src`, se tiene que especicar la fuente de donde proviene esa imagen y dentro de `alt` se debe de poner una descripción de la imagen.
 
 - `<table> </table>`:Etiqueta contenedora que tendrá en su interior toda la tabla.
-`<tr>`Table Row. Etiqueta contenedora de cada fila de la tabla.
-`<td>` Table Data. Cada una de las celdas de la tabla.
-`<th>` Table Header. Cada una de las celdas de cabecera de la tabla.
-``` <table>
+- `<tr>`Table Row. Etiqueta contenedora de cada fila de la tabla.
+- `<td>` Table Data. Cada una de las celdas de la tabla.
+- `<th>` Table Header. Cada una de las celdas de cabecera de la tabla.
+- `<tbody>...</tbody>`: Etiqueta que se utiliza para agrupar el contenido del cuerpo de una tabla.
+- `<theader>...<theader>`: Categorias de la tabla o encabezado.
+- `<tfoot>...<tfoot>`: Pie de la tabla.
+  
+```<table>
   <tr>
     <th>Título columna 1</th> <!-- Celda cabecera de la columna 1 -->
     <th>Título columna 2</th> <!-- Celda cabecera de la columna 2 -->
@@ -44,30 +49,38 @@
 
 - `<a>..</a>`: Se usa para poner hipervinculos en la pagina, para que funcione se debe usar el atributo `href`, que es donde se encuentra la direccion web a la que se dirigira.
 
-Forma de usar: 
+Forma de usar:
 
 `<a href="https://www.PaginaEjemplo.com/es-ES/"> la pagina de ejemplo </a>`
 
 - `<blockquote>...</blockquote>`:
 Se usa para citar un bloque de texto
+
 -`<q>...</q>`: Hace citas cortas con comillas ("cita").
 
-<<<<<<< HEAD
 - `<center>`: Permite que un texto este con formato centrado
-=======
+  
 - `<cite>...</cite>`: Referencia a titulos. . .
->>>>>>> f3c6645c5f96818db8539730dae26ad6bf966bbf
 
 - `<span>...<span>`: Texto breve
 
-- `<figure>...</figure>´ & `<figcaption>...<figcaption>`: Sirve para añadir una descripcion a una imagen y que sea visible
+- `<figure>...</figure> & <figcaption>...<figcaption>`: Sirve para añadir una descripcion a una imagen y que sea visible
 
-- `<br>`: Salto de linea 
+- `<br>`: Salto de linea
 
-- `<hr>`: linea horizona
+- `<hr>`: linea horizonal
+  
+- `<em>...</em>`: enfatizar un fragmento de texto (enfasis suave)
+- `<strong>...</strong>`: enfatizar un fragmento de texto (enfasis mas fuerte)
 
-- `<ol>...</ol>`
+- `<b>...</b>`: texto en negrita
 
-- `<ul>...</ul>`
+-`<u>...</u>`: subraya texto
 
-- `<li>...</li>`
+-`<i>...</i>`: sirve para poner un texto en cursiva
+
+- `<ol>...</ol>`: Lista organizada
+
+- `<ul>...</ul>`: Lista desorganizada
+
+- `<li>...</li>`: Item de la lista
