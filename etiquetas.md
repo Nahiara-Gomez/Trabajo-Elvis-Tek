@@ -58,7 +58,7 @@ Se usa para citar un bloque de texto
 
 -`<q>...</q>`: Hace citas cortas con comillas ("cita").
 
-- `<center>`: Permite que un texto este con formato centrado
+- `<code>...</code>`: Permite mostrar un fragmento de codigo
   
 - `<cite>...</cite>`: Referencia a titulos. . .
 
