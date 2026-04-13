@@ -72,7 +72,7 @@ Se usa para citar un bloque de texto
   
 - `<em>...</em>`: enfatizar un fragmento de texto (enfasis suave)
 - `<strong>...</strong>`: enfatizar un fragmento de texto (enfasis mas fuerte)
-
+ 
 - `<b>...</b>`: texto en negrita
 
 -`<u>...</u>`: subraya texto
@@ -84,3 +84,51 @@ Se usa para citar un bloque de texto
 - `<ul>...</ul>`: Lista desorganizada
 
 - `<li>...</li>`: Item de la lista
+
+- <form>: Se utiliza para crear formularios que permiten a los usuarios enviar datos a un servidor o procesarlos en el navegador. Es la etiqueta contenedora de todo el formulario.
+Tiene como atributos>
+`action`: dónde se envían los datos
+`method`: cómo se envían (get o post)
+- <label>: Se utilza para asociar un texto descriptivo con un control de formulario.
+Puede tener el atributo:
+`for="name"`: conecta este label con un input que tenga id="name".
+- `<input>`: Crea campo de entrada en formularios permitiendo al usuario introducir datos. Se puede usar el atributo: type="number" para especificar el tipo de dato.
+Cuenta con el atributo `type`el cual determina el tipo de datos es, este puede ser text, `password`para contraseña , `email`, `submit`, etc.
+`name`: Atributo obligatorio en los inputs para que los datos sean enviados
+`<button type="submit">`: Botón para enviar los datos al servidor.
+
+`placeholder`: Muestra un texto descriptivo o indicativo de lo que el usuario debe escribir dentro del campo
+`autocomplete`:Permite a los navegadores sugerir y rellenar automáticamente campos de formularios (nombres, correos, direcciones) basándose en datos previamente guardados por el usuario.
+
+Sintaxis tabla:
+``` 
+<form action="/my-handling-form-page" method="post">
+  <ul>
+    <li>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="user_name" placeholder="Escribe tu nombre aqui" />
+    </li>
+    <li>
+      <label for="mail">Correo electrónico:</label>
+      <input type="email" id="mail" name="user_mail" placeholder="Escribe tu correo electronico" />
+    </li>
+    <li>
+      <label for="msg">Mensaje:</label>
+      <textarea id="msg" name="user_message" placeholder="Escriba su mensaje"></textarea>
+    </li>
+  </ul>
+</form>
+```
+Sintaxis autocomplete:
+```
+<form action="/enviar" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" autocomplete="name">
+  
+  <label for="email">Correo:</label>
+  <input type="email" id="email" name="email" autocomplete="email">
+  
+  <input type="submit" value="Enviar">
+</form>
+```
+
