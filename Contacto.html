@@ -11,5 +11,42 @@
     <h3><p><b>Para consultas de presupuesto y disponibilidad contactenos por:</b></p></h3>
     <p>Mail: mailelvis@gmail.com</p>
     <p>Numero telefonico: 8492548</p>
+
+    <h4>Para consultas especificas:</h4>
+<ul>
+    <li>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre_cliente" placeholder="Escribe tu nombre aqui"/>
+    </li>
+    <li>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido_cliente" placeholder="Ingrese su apellido aqui"/>
+    </li>
+    <li>
+        <label for="telefono">Numero de telefono</label>
+        <input type="tel" id="telefono" name="telefono_cliente" placeholder="Ingrese su numero de telefono"/>
+    </li>
+    <li>
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo" name="correo_cliente" placeholder="Ingrese aqui su correo electronico"/>
+    </li>
+    <li>
+        <label for="tipo_consultas">Tipo de consulta</label>
+        <select name="lista" id="tipo_consultas">
+          <option value="catalogo">Catalogo</option>
+          <option value="repuesto">Repuesto</option>
+          <option value="desperfecto">Desperfecto</option>
+        </select>
+        </li>
+        <li>
+            <label for="descripcion">Describe que precisas:</label>
+            <textarea id="descripcion" name="descripcion" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
+        </li>
+        <li>
+            <input type="submit">
+        </li>
+
+</ul>
+    
 </body>
 </html>
