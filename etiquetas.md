@@ -85,20 +85,25 @@ Se usa para citar un bloque de texto
 
 - `<li>...</li>`: Item de la lista
 
-- <form>: Se utiliza para crear formularios que permiten a los usuarios enviar datos a un servidor o procesarlos en el navegador. Es la etiqueta contenedora de todo el formulario.
+- `<form>`: Se utiliza para crear formularios que permiten a los usuarios enviar datos a un servidor o procesarlos en el navegador. Es la etiqueta contenedora de todo el formulario.
 Tiene como atributos>
 `action`: dónde se envían los datos
 `method`: cómo se envían (get o post)
-- <label>: Se utilza para asociar un texto descriptivo con un control de formulario.
+- `<label>`: Se utilza para asociar un texto descriptivo con un control de formulario.
 Puede tener el atributo:
 `for="name"`: conecta este label con un input que tenga id="name".
 - `<input>`: Crea campo de entrada en formularios permitiendo al usuario introducir datos. Se puede usar el atributo: type="number" para especificar el tipo de dato.
 Cuenta con el atributo `type`el cual determina el tipo de datos es, este puede ser text, `password`para contraseña , `email`, `submit`, etc.
+`id`: Le asigna al input una id propia
 `name`: Atributo obligatorio en los inputs para que los datos sean enviados
 `<button type="submit">`: Botón para enviar los datos al servidor.
 
 `placeholder`: Muestra un texto descriptivo o indicativo de lo que el usuario debe escribir dentro del campo
 `autocomplete`:Permite a los navegadores sugerir y rellenar automáticamente campos de formularios (nombres, correos, direcciones) basándose en datos previamente guardados por el usuario.
+
+`<select>`: Se usa para definir una lista de opciones
+`<option>`: Define una opcion
+`value`: un atributo el cual define el valor de la opcion
 
 Sintaxis tabla:
 ``` 
