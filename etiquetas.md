@@ -72,7 +72,6 @@ Se usa para citar un bloque de texto
   
 - `<em>...</em>`: enfatizar un fragmento de texto (enfasis suave)
 - `<strong>...</strong>`: enfatizar un fragmento de texto (enfasis mas fuerte)
- 
 - `<b>...</b>`: texto en negrita
 
 -`<u>...</u>`: subraya texto
@@ -105,8 +104,10 @@ Cuenta con el atributo `type`el cual determina el tipo de datos es, este puede s
 `<option>`: Define una opcion
 `value`: un atributo el cual define el valor de la opcion
 
-Sintaxis tabla:
-``` 
+Sintaxis formulario:
+
+```
+<html>
 <form action="/my-handling-form-page" method="post">
   <ul>
     <li>
@@ -123,9 +124,13 @@ Sintaxis tabla:
     </li>
   </ul>
 </form>
+</html>
 ```
+
 Sintaxis autocomplete:
+
 ```
+<html>
 <form action="/enviar" method="post">
   <label for="nombre">Nombre:</label>
   <input type="text" id="nombre" name="nombre" autocomplete="name">
@@ -135,5 +140,5 @@ Sintaxis autocomplete:
   
   <input type="submit" value="Enviar">
 </form>
+</html>
 ```
-
