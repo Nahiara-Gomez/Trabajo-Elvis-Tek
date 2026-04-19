@@ -142,3 +142,6 @@ Sintaxis autocomplete:
 </form>
 </html>
 ```
+`pattern`: Se usa para definir que valores se pueden introducir en un campo, dentro del input, por ejemplo: pattern="[A-Za-z]{3}" hace que se puedan poner solo 3 letras.
+
+`title`: provee información suplementaria a un campo, sea al mantener el cursor en el, o al enviar el formulario y contener un error en el.
