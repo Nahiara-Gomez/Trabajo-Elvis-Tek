@@ -93,6 +93,7 @@ Puede tener el atributo:
 `for="name"`: conecta este label con un input que tenga id="name".
 - `<input>`: Crea campo de entrada en formularios permitiendo al usuario introducir datos. Se puede usar el atributo: type="number" para especificar el tipo de dato.
 Cuenta con el atributo `type`el cual determina el tipo de datos es, este puede ser text, `password`para contraseña , `email`, `submit`, etc.
+-`<input type="tel"`:Se usa en formularios para campos de número de teléfono. Activa el teclado numérico en móviles.
 `id`: Le asigna al input una id propia
 `name`: Atributo obligatorio en los inputs para que los datos sean enviados
 `<button type="submit">`: Botón para enviar los datos al servidor.
@@ -142,6 +143,10 @@ Sintaxis autocomplete:
 </form>
 </html>
 ```
-`pattern`: Se usa para definir que valores se pueden introducir en un campo, dentro del input, por ejemplo: pattern="[A-Za-z]{3}" hace que se puedan poner solo 3 letras.
 
-`title`: provee información suplementaria a un campo, sea al mantener el cursor en el, o al enviar el formulario y contener un error en el.
+- `pattern`: Se usa para definir que valores se pueden introducir en un campo, dentro del input, por ejemplo: pattern="[A-Za-z]{3}" hace que se puedan poner solo 3 letras.
+
+- `title`: provee información suplementaria a un campo, sea al mantener el cursor en el, o al enviar el formulario y contener un error en el.
+
+- `maxlength`: Permite limitar la cantidad de caracteres que se pueden ingresar en un campo.
+  

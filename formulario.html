@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Postulación</title>
 </head>
+
 <body>
 
     <h1>Postulación a la empresa</h1>
@@ -12,39 +14,18 @@
 
         <!-- Correo -->
         <label for="correo">Correo electrónico:</label><br>
-        <input 
-            type="email" 
-            id="correo" 
-            name="correo" 
-            placeholder="ejemplo@correo.com" 
-            required
-        ><br><br>
+        <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com"><br><br>
 
         <!-- Texto libre -->
         <label for="mensaje">Contanos sobre vos:</label><br>
-        <textarea 
-            id="mensaje" 
-            name="mensaje" 
-            placeholder="Escribí acá tu experiencia, motivación, etc..." 
-            required
-        ></textarea><br><br>
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribí acá tu experiencia, motivación, etc..."></textarea><br><br>
 
         <!-- Subir CV -->
         <label for="cv">Adjuntar Curriculum:</label><br>
-        <input 
-            type="file" 
-            id="cv" 
-            name="cv" 
-            required
-        ><br><br>
+        <input type="file" id="cv" required name="cv"><br><br>
 
         <!-- Checkbox -->
-        <input 
-            type="checkbox" 
-            id="acepto" 
-            name="acepto" 
-            required
-        >
+        <input type="checkbox" id="acepto" required name="acepto">
         <label for="acepto">
             Acepto ser contratado en Todo en Blanco
         </label><br><br>
@@ -55,4 +36,5 @@
     </form>
 
 </body>
+
 </html>
