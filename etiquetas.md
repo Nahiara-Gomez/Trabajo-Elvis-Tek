@@ -150,3 +150,5 @@ Sintaxis autocomplete:
 
 - `maxlength`: Permite limitar la cantidad de caracteres que se pueden ingresar en un campo.
   
+  - `onsubmit`: Ayuda a hacer una validación antes de enviar los datos de un formulario. A traves de esta se puede detener o no el envio de un formulario.
+  

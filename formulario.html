@@ -6,19 +6,36 @@
     <title>Formulario de Postulación</title>
 </head>
 <nav>
-            <ul>
-                <li><a href="index.html">Pagina principal.</a></li>
-                <li><a href="Contacto.html">Consultas</a></li>
-                <li><a href="sobre_nosotros.html">sobre nosotros</a></li>
-                <li><a href="Ingreso_empleados.html">Empleados</a></li>
-                <li><a href="formulario.html">Trabaja con nosotros!</a></li>
-            </ul>
-        </nav>
+    <ul>
+        <li><a href="index.html">Pagina principal.</a></li>
+        <li><a href="Contacto.html">Consultas</a></li>
+        <li><a href="sobre_nosotros.html">sobre nosotros</a></li>
+        <li><a href="Ingreso_empleados.html">Empleados</a></li>
+        <li><a href="formulario.html">Trabaja con nosotros!</a></li>
+    </ul>
+</nav>
+
 <body>
 
     <h1>Postulación a la empresa</h1>
 
-    <form action="#" method="post" enctype="multipart/form-data">
+    <p>Requisitos para la postulación</p>
+    <ul>
+        <li>
+            Ser mayor de edad
+        </li>
+        <li>
+            Tener estudios previos
+        </li>
+        <li>
+            Se valorará contar con referencias laborales
+        </li>
+
+    </ul>
+
+    <form action="#" method="post" enctype="multipart/form-data"
+        onsubmit="return confirm('¿Desea enviar la solicitud de trabajo?')">
+
 
         <!-- Correo -->
         <label for="correo">Correo electrónico:</label><br>
@@ -26,7 +43,8 @@
 
         <!-- Texto libre -->
         <label for="mensaje">Contanos sobre vos:</label><br>
-        <textarea id="mensaje" name="mensaje" required placeholder="Escribí acá tu experiencia, motivación, etc..."></textarea><br><br>
+        <textarea id="mensaje" name="mensaje" required
+            placeholder="Escribí acá tu experiencia, motivación, etc..."></textarea><br><br>
 
         <!-- Subir CV -->
         <label for="cv">Adjuntar Curriculum:</label><br>
