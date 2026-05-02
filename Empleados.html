@@ -6,6 +6,83 @@
     <title>Empleados</title>
 </head>
 <body>
-    <h1>Bienvenido, Empleado</h1>
+    <h1>Empleados</h1>
+    <button onclick="agregarEmpleado()">Agregar</button>
+    <table border="1" id="tabla">
+        <tr>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cargo</th>
+        </tr>
+         <tr>
+    <td>12345678</td>
+    <td>Juan</td>
+    <td>Pérez</td>
+    <td>Vendedor</td>
+    <td>
+      <button onclick="modificar(this)">Modificar</button>
+      <button onclick="borrar(this)">Borrar</button>
+    </td>
+  </tr>
+</table>
+    <script>
+function borrar(boton) {
+  let fila = boton.parentNode.parentNode;
+  fila.remove();
+}
+
+function modificar(boton) {
+  let fila = boton.parentNode.parentNode;
+  let celdas = fila.getElementsByTagName("td");
+
+  let cedula = prompt("Cédula:", celdas[0].innerText);
+
+
+  if (!cedula || !/^\d+$/.test(cedula)) {
+    alert("La cédula debe tener solo números");
+    return;
+  }
+  let nombre = prompt("Nombre:", celdas[1].innerText);
+  let apellido = prompt("Apellido:", celdas[2].innerText);
+  let cargo = prompt("Cargo:", celdas[3].innerText);
+
+  if (cedula && nombre && apellido && cargo) {
+    celdas[0].innerText = cedula;
+    celdas[1].innerText = nombre;
+    celdas[2].innerText = apellido;
+    celdas[3].innerText = cargo;
+  }
+}
+
+function agregarEmpleado() {
+
+  let cedula = prompt("Cédula:");
+
+if (!/^\d+$/.test(cedula)) {
+  alert("La cédula debe tener solo números");
+  return;
+}  
+  let nombre = prompt("Nombre:");
+  let apellido = prompt("Apellido:");
+  let cargo = prompt("Cargo:");
+
+  if (!cedula || !nombre || !apellido || !cargo) return;
+
+  let tabla = document.getElementById("tabla");
+  let fila = tabla.insertRow();
+
+  fila.insertCell(0).innerText = cedula;
+  fila.insertCell(1).innerText = nombre;
+  fila.insertCell(2).innerText = apellido;
+  fila.insertCell(3).innerText = cargo;
+
+  let acciones = fila.insertCell(4);
+  acciones.innerHTML = `
+    <button onclick="modificar(this)">Modificar</button>
+    <button onclick="borrar(this)">Borrar</button>
+  `;
+}
+</script>
 </body>
 </html>
