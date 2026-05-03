@@ -152,3 +152,23 @@ Sintaxis autocomplete:
   
   - `onsubmit`: Ayuda a hacer una validación antes de enviar los datos de un formulario. A traves de esta se puede detener o no el envio de un formulario.
   
+  - `<link rel="stylesheet" href="styles.css">`: Sirve para vincular un archivo del css, con uno html
+
+- `class="nombre_de_la_clase"`: Se utiliza para asignar uno o más nombres de clase a un elemento, permitiendo aplicar reglas de estilo CSS específicas de manera reutilizable a múltiples elementos.
+
+## Etiquetas css
+
+- `Selectores css`:
+- `padding: valor;`:Es el espacio interno entre el contenido y el borde del elemento 
+- `margin: valor;`: Crea espacio externo alrededor del borde del elemento.Sirve para separar un elemento de otro.
+- `box-sizing: border-box`: Sirve para establecer que el ancho y alto en total de un elemento incluyan el contenido, el padding y el margin ya que sin esta propiedad `border-box` el tamaño de un elemento se calularia sumando el contenido, el padding y el borde.
+- ` width: valor;`: Define el ancho que va a ocupar el contenido de un elemento
+- `list-style: none;`: Sirve para eliminar los puntos por default de las listas
+- `background-color:`: Define el color del fondo del elemento.
+- `background-color linear-gradient`:Hace que el fondo de un elemento, pueda ser la transición de dos colores difuminados.
+-  `text-align: valor;`: Te permite modificar la alineación horizontal del texto y elementos en línea (como imágenes).
+- `display: flex;`: Permite hacer a un contenedor flexible,permitiendo organizar sus elementos hijos de manera más eficiente en una fila o columna, facilitando la adaptabilidad.
+- `position: valor;`: Esta propiedad define el tipo de posicionamiento usado para colocar un elemento. Los valores que se pueden utilizar son static (mantiene la ubicación que tienen los elementos por defecto), relative (se posiciona según la posición original del elemento), absolute (se posiciona con una posición absoluta relativa al contenedor del elemento), y fixed  se queda en una ubicación fija aunque hagas scroll)
+- `display: inline;`: Logra que un elemento HTML se comporte como un elemento en línea, situándose al lado de otros elementos en lugar de iniciar una nueva línea.
+- `text-decoration: none;`:Con el atributo none en este caso hace que se le quite toda decoración que tenga un texto, como subrayado, tachado o lineas superiores.
+
