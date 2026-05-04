@@ -12,7 +12,7 @@
 <nav>
             <ul class="menu_principal">
                 <li><a href="index.html">Pagina principal</a></li>
-                <li><a href="Contacto.html">Consultas</a></li>
+                <li><a href="Contacto.html">Contáctanos</a></li>
                 <li><a href="sobre_nosotros.html">sobre nosotros</a></li>
                 <li><a href="Ingreso_empleados.html">Empleados</a></li>
                 <li><a href="formulario.html">Trabaja con nosotros</a></li>
@@ -22,8 +22,9 @@
     <h3>
         <p><b>Para consultas de presupuesto y disponibilidad contactenos por:</b></p>
     </h3>
-    <p>Mail: mailelvis@gmail.com</p>
-    <p>Numero telefonico: 8492548</p>
+    <p>Mail: clientestodoenblanco@gmail.com</p>
+    <p>Numero telefonico: 4567 7373</p>
+    <p>Numero de Whatsapp: +598 9532 4444</p>
 
     <h4>Para consultas especificas:</h4>
 
@@ -39,7 +40,7 @@
         </li>
         <li>
             <label for="telefono">Numero de telefono</label>
-            <input type="tel" id="telefono" name="telefono_cliente" pattern="[0-9]+" title="Ingrese solo numeros"
+            <input type="tel" id="telefono" name="telefono_cliente" maxlength="9" pattern="[0-9]+" title="Ingrese solo numeros"
                 maxlength="9" placeholder="Ingrese su numero de telefono" />
         </li>
         <li>
@@ -59,6 +60,13 @@
             <label for="descripcion">Describe que precisas:</label>
             <textarea id="descripcion" name="descripcion" rows="10" cols="50" required
                 placeholder="Escribe aquí"></textarea>
+        </li>
+        <li>
+            <label>
+              <input type="checkbox" required>
+               Confirmo que quiero enviar el formulario
+            </label>
+            
         </li>
         <li>
             <input type="submit" value="Enviar">
