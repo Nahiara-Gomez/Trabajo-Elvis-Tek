@@ -1,6 +1,4 @@
 * {
-    padding: 0;
-    margin: 0%;
     box-sizing: border-box;
 }
 
@@ -8,14 +6,10 @@
     width: 100%;
     box-sizing: border-box;
     list-style: none;
-    padding: 2%;
     background-color: #47606f;
-    text-align: center;
 }
 
 .menu_principal li {
-    
-    margin: 0.5%;
     position: relative;
     display: inline;
 }
@@ -23,13 +17,10 @@
 
 
 .menu_principal li a {
-    padding: 0.2%;
     text-decoration: none;
-    padding: auto;
     color: #c0c0c0;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 2px solid transparent;
     font-size: 15px;
     
 }
@@ -38,12 +29,10 @@
     display: inline;
     position: relative;
     color: black;
-    border: 2px solid #eeb906;
     background-color: #eeb906;
 }
 
 body {
-    text-align: center;
 }
 
 
