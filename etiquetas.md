@@ -158,7 +158,16 @@ Sintaxis autocomplete:
 
 ## Etiquetas css
 
-- `Selectores css`:
+- `Selectores css`: Un selector css identifica un elemento HTML el cual se verá afectado por propiedades (las propiedades modifican la apariencia de un elemento)
+- `selector por nombre`;Un selector por nombre sirve para referenciar el nombre de una etiqueta la cual queremos modificar. Por lo cual aplica las modificacionesa a todas las etiquetas que se llamen igual al selector que ponemos.
+  Ej: p {}.
+- `Selector por id`: Este selector es mas especifico que el anterior, ya que nosotros elejimos un elemento solo y le ponemos una id única. Luego en el css, llamamos a esta id, y el cambio se aplica al único elemento que tenga esa id.
+  Ej: #id_elemento1{}
+- `selector por clase`: Cuando queremos referenciar a varios elementos, pero que no necesariamente sean todos de una misma etiqueta usamos el selector de clase. Ya que este es mas flexible en cuanto a los elementos que queremos seleccionar.
+  Ej: .class1{}
+-`seudoclases`: Las seudoclases son herramientas especiales de CSS que nos permiten referenciar elementos
+HTML por medio de sus características, como sus posiciones en el código o sus condiciones actuales.
+Ej: botton:hover {} (cuando pasas el mouse por arriba del boton va a tener x características)
 - `padding: valor;`:Es el espacio interno entre el contenido y el borde del elemento 
 - `margin: valor;`: Crea espacio externo alrededor del borde del elemento.Sirve para separar un elemento de otro.
 - `box-sizing: border-box`: Sirve para establecer que el ancho y alto en total de un elemento incluyan el contenido, el padding y el margin ya que sin esta propiedad `border-box` el tamaño de un elemento se calularia sumando el contenido, el padding y el borde.
