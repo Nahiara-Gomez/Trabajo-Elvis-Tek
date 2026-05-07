@@ -5,17 +5,17 @@
     --oscuro:  #58646d;
     --medio: #47606f;
     --amarillo:  #eeb906;
+    --azulClaro: #9ecdf3;
 }
 
 
 body{
-    background-color:var(--grisPaleta);
+    background-color:var(--azulClaro);
     font-size: 17px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.7;
     color:var(--oscuro);
     max-width: 100%;
-    text-align: center;
 } 
 
 section{
@@ -41,12 +41,10 @@ th{
     font-size: 19px;
     min-height: 80px;
     color: var(--oscuro);
-    text-align: center;
 }
 tr:nth-child(even) td{
  background-color:#bfc9cf;
  color: var(--oscuro);
- text-align: center;
 }
 footer  {
     background-color: var(--oscuro);
