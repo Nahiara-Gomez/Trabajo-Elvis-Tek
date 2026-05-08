@@ -1,0 +1,63 @@
+.Formulario {
+    color: var(--oscuro);
+    line-height: 1.8;
+    max-width: 800px;
+
+}
+
+.Formulario li{
+    list-style: none;
+    
+}
+.Formulario h4, .Formulario legend{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+}
+.Formulario label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Formulario input, .Formulario textarea,
+.Formulario select{
+    color:var(--oscuro);
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 70%;
+    max-width: 500px;
+    
+}
+
+.Formulario .checkbox{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Formulario .TextoCheckbox{
+    width: auto;
+}
+
+.Formulario fieldset{
+    max-width: 90%;
+}
+
+.Formulario input:focus,
+.Formulario textarea:focus,
+.Formulario select:focus{
+    background-color: var(--grisClaro);
+    color:var(--oscuro);
+
+}
+
+.Formulario button:focus,
+.Formulario button:hover {
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+    
+}
+
+.postulacion{
+    line-height: 1.5;
+}

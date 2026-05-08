@@ -5,20 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
-     <link rel="stylesheet" href="assets/css/global.css">
-     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/formularios.css">
 
 </head>
-<nav>
+
+<body>
+    <header>
+        <h1>Todo en blanco</h1>
+        <img class="logo" src="assets/img/Airbrush-IMAGE-ENHANCER-1777983628316-1777983628316-removebg-preview.png"
+        alt="futuro logo">
+        <nav>
             <ul class="menu_principal">
-                <li><a href="index.html">Pagina principal</a></li>
-                <li><a href="Contacto.html">Contáctanos</a></li>
-                <li><a href="sobre_nosotros.html">sobre nosotros</a></li>
-                <li><a href="Ingreso_empleados.html">Empleados</a></li>
-                <li><a href="formulario.html">Trabaja con nosotros</a></li>
+                <li><a href="index.html" class="BotonNavegacion">Pagina principal</a></li>
+                <li><a href="Contacto.html" class="BotonNavegacion">Contáctanos</a></li>
+                <li><a href="sobre_nosotros.html" class="BotonNavegacion">sobre nosotros</a></li>
+                <li><a href="Ingreso_empleados.html" class="BotonNavegacion">Empleados</a></li>
+                <li><a href="formulario.html" class="BotonNavegacion">Trabaja con nosotros</a></li>
             </ul>
         </nav>
-<body>
+        
+    </header>
     <main>
         <section class="ContactosPresupuesto">
             <h3>
@@ -27,59 +34,87 @@
             <p>Mail: clientestodoenblanco@gmail.com</p>
             <p>Numero telefonico: 4567 7373</p>
             <p>Numero de Whatsapp: +598 9532 4444</p>
-    
+
         </section>
 
-        <section class="ContactosEspecificos">
-        <h4>Para consultas especificas:</h4>
+        <section class="Formulario">
+            <h4>Para consultas especificas:</h4>
 
-        <form>
-            <ul>
-            <li>
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre_cliente" required placeholder="Escribe tu nombre aqui" />
-            </li>
-            <li>
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido_cliente" required placeholder="Ingrese su apellido aqui" />
-            </li>
-            <li>
-                <label for="telefono">Numero de telefono</label>
-                <input type="tel" id="telefono" name="telefono_cliente" maxlength="9" pattern="[0-9]+" title="Ingrese solo numeros"
-                    maxlength="9" placeholder="Ingrese su numero de telefono" />
-            </li>
-            <li>
-                <label for="correo">Correo electronico</label>
-                <input type="email" id="correo" name="correo_cliente" required
-                    placeholder="Ingrese aqui su correo electronico" />
-            </li>
-            <li>
-                <label for="tipo_consultas">Tipo de consulta</label>
-                <select name="lista" id="tipo_consultas">
-                    <option value="catalogo">Catalogo</option>
-                    <option value="repuesto">Repuesto</option>
-                    <option value="desperfecto">Desperfecto</option>
-                </select>
-            </li>
-            <li>
-                <label for="descripcion">Describe que precisas:</label>
-                <textarea id="descripcion" name="descripcion" rows="10" cols="50" required
-                    placeholder="Escribe aquí"></textarea>
-            </li>
-            <li>
-                <label>
-                <input type="checkbox" required>
-                Confirmo que quiero enviar el formulario
-                </label>
-                
-            </li>
-            <li>
-                <input type="submit" value="Enviar">
-            </li>
-            </ul>  
-        </form>
-    </section>
+            <form action="FormularioExitoso.html" method="post">
+                <fieldset>
+                    <legend>Ingresar consulta</legend>
+                <ul>
+                    <li>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre_cliente" required
+                            placeholder="Escribe tu nombre aqui" />
+                    </li>
+                    <li>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido_cliente" required
+                            placeholder="Ingrese su apellido aqui" />
+                    </li>
+                    <li>
+                        <label for="telefono">Numero de telefono</label>
+                        <input type="tel" id="telefono" name="telefono_cliente" maxlength="9" pattern="[0-9]+"
+                            title="Ingrese solo numeros" maxlength="9" placeholder="Ingrese su numero de telefono" />
+                    </li>
+                    <li>
+                        <label for="correo">Correo electronico</label>
+                        <input type="email" id="correo" name="correo_cliente" required
+                            placeholder="Ingrese aqui su correo electronico" />
+                    </li>
+                    <li>
+                        <label for="tipo_consultas">Tipo de consulta</label>
+                        <select name="lista" id="tipo_consultas">
+                            <option value="catalogo">Catalogo</option>
+                            <option value="repuesto">Repuesto</option>
+                            <option value="desperfecto">Desperfecto</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="descripcion">Describe que precisas:</label>
+                        <textarea id="descripcion" name="descripcion" rows="10" cols="50" required
+                            placeholder="Escribe aquí"></textarea>
+                    </li>
+                    <li>
+                        <label class="checkbox">
+                            <input type="checkbox"  class="TextoCheckbox" required>
+                            Confirmo que quiero enviar el formulario
+                        </label>
+
+                    </li>
+                    <li>
+                        <button type="submit">Ingresar </a></button>
+                    </li>
+                </ul>
+                </fieldset>
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <h2>Nuestras Redes!</h2>
+        <a href="https://www.instagram.com"><img
+                src="assets/img/138612.png"
+                alt="Instagram" style="width: 50px;size: auto;" /></a>
+        <a href="https://www.Facebook.com"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKhnqLc8PzVT-CHCSgTL_k-InefmXfvMbhrA&s"
+                alt="Facebook" style="width: 50px;size: auto;"></a>
+        <a href="https://www.X.com"><img
+                src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca"
+                alt="X(Twitter)" style="width: 50px; height: auto;"></a>
+        <h3>
+            <b>
+                Numero de contacto: 4567 7373
+            </b>
+            <b>
+                <p>
+                    Numero de Whatsapp: +598 9532 4444
+                </p>
+            </b>
+        </h3>
+    </footer>
 </body>
 
 </html>

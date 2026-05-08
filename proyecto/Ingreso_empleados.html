@@ -5,35 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/formularios.css">
 
 </head>
-<nav>
-            <ul class="menu_principal">
-                <li><a href="index.html">Pagina principal</a></li>
-                <li><a href="Contacto.html">Contáctanos</a></li>
-                <li><a href="sobre_nosotros.html">sobre nosotros</a></li>
-                <li><a href="Ingreso_empleados.html">Empleados</a></li>
-                <li><a href="formulario.html">Trabaja con nosotros</a></li>
-            </ul>
-        </nav>
+        
 <body>
-    <form action="Empleados.html">
-        <li>
-            <label for="CI">Cedula de identidad</label>
-            <input type="text" id="CI" name="CI_empleado" pattern="[1-9]+" title="Sin puntos ni guiones" maxlength="8"
-                required placeholder="Escribe tu cedula aqui" />
-        </li>
-        <li>
-            <label for="Contraseña">Contraseña</label>
-            <input type="password" id="Contraseña" name="Contraseña_empleado" required
-                placeholder="Ingrese su contraseña aqui" />
-        </li>
-        <li>
-            <button type="submit">Ingresar </a></button>
-        </li>
-    </form>
+    <header>
+        <h1>Todo en blanco</h1>
+        <img class="logo" src="assets/img/Airbrush-IMAGE-ENHANCER-1777983628316-1777983628316-removebg-preview.png"
+        alt="futuro logo">
+            <nav>
+                <ul class="menu_principal">
+                    <li><a href="index.html" class="BotonNavegacion">Pagina principal</a></li>
+                    <li><a href="Contacto.html" class="BotonNavegacion">Contáctanos</a></li>
+                    <li><a href="sobre_nosotros.html" class="BotonNavegacion">sobre nosotros</a></li>
+                    <li><a href="Ingreso_empleados.html" class="BotonNavegacion">Empleados</a></li>
+                    <li><a href="formulario.html" class="BotonNavegacion">Trabaja con nosotros</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <Main>
+        <section class="Formulario">
+            <form action="Empleados.html">
+                <fieldset>
+                    <legend>Ingreso</legend>
+                    <li>
+                        <label for="CI">Cedula de identidad</label>
+                        <input type="text" id="CI" name="CI_empleado" pattern="[1-9]+" title="Sin puntos ni guiones" maxlength="8"
+                            required placeholder="Escribe tu cedula aqui" />
+                    </li>
+                    <li>
+                        <label for="Contraseña">Contraseña</label>
+                        <input type="password" id="Contraseña" name="Contraseña_empleado" required
+                            placeholder="Ingrese su contraseña aqui" />
+                    </li>
+                    <li>
+                        <button type="submit">Ingresar </a></button>
+                    </li>
+            
+                </fieldset>
+            </form>
+        </section>
+    </Main>
 </body>
 
 </html>
