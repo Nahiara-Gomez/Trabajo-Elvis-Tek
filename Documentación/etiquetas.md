@@ -156,28 +156,13 @@ Sintaxis autocomplete:
 
 - `class="nombre_de_la_clase"`: Se utiliza para asignar uno o más nombres de clase a un elemento, permitiendo aplicar reglas de estilo CSS específicas de manera reutilizable a múltiples elementos.
 
-## Etiquetas css
-
-- `Selectores css`: Un selector css identifica un elemento HTML el cual se verá afectado por propiedades (las propiedades modifican la apariencia de un elemento)
-- `selector por nombre`;Un selector por nombre sirve para referenciar el nombre de una etiqueta la cual queremos modificar. Por lo cual aplica las modificacionesa a todas las etiquetas que se llamen igual al selector que ponemos.
-  Ej: p {}.
-- `Selector por id`: Este selector es mas especifico que el anterior, ya que nosotros elejimos un elemento solo y le ponemos una id única. Luego en el css, llamamos a esta id, y el cambio se aplica al único elemento que tenga esa id.
-  Ej: #id_elemento1{}
-- `selector por clase`: Cuando queremos referenciar a varios elementos, pero que no necesariamente sean todos de una misma etiqueta usamos el selector de clase. Ya que este es mas flexible en cuanto a los elementos que queremos seleccionar.
-  Ej: .class1{}
--`seudoclases`: Las seudoclases son herramientas especiales de CSS que nos permiten referenciar elementos
-HTML por medio de sus características, como sus posiciones en el código o sus condiciones actuales.
-Ej: botton:hover {} (cuando pasas el mouse por arriba del boton va a tener x características)
-- `padding: valor;`:Es el espacio interno entre el contenido y el borde del elemento 
-- `margin: valor;`: Crea espacio externo alrededor del borde del elemento.Sirve para separar un elemento de otro.
-- `box-sizing: border-box`: Sirve para establecer que el ancho y alto en total de un elemento incluyan el contenido, el padding y el margin ya que sin esta propiedad `border-box` el tamaño de un elemento se calularia sumando el contenido, el padding y el borde.
-- ` width: valor;`: Define el ancho que va a ocupar el contenido de un elemento
-- `list-style: none;`: Sirve para eliminar los puntos por default de las listas
-- `background-color:`: Define el color del fondo del elemento.
-- `background-color linear-gradient`:Hace que el fondo de un elemento, pueda ser la transición de dos colores difuminados.
--  `text-align: valor;`: Te permite modificar la alineación horizontal del texto y elementos en línea (como imágenes).
-- `display: flex;`: Permite hacer a un contenedor flexible,permitiendo organizar sus elementos hijos de manera más eficiente en una fila o columna, facilitando la adaptabilidad.
-- `position: valor;`: Esta propiedad define el tipo de posicionamiento usado para colocar un elemento. Los valores que se pueden utilizar son static (mantiene la ubicación que tienen los elementos por defecto), relative (se posiciona según la posición original del elemento), absolute (se posiciona con una posición absoluta relativa al contenedor del elemento), y fixed  se queda en una ubicación fija aunque hagas scroll)
-- `display: inline;`: Logra que un elemento HTML se comporte como un elemento en línea, situándose al lado de otros elementos en lugar de iniciar una nueva línea.
-- `text-decoration: none;`:Con el atributo none en este caso hace que se le quite toda decoración que tenga un texto, como subrayado, tachado o lineas superiores.
-
+- ´<header>´
+Representa el encabezado de una página o de una sección. Generalmente contiene títulos, logotipos, menús de navegación o información introductoria.
+- ´<footer>´
+Representa el pie de una página o sección. Suele incluir información de contacto, derechos de autor, enlaces adicionales o datos del autor.
+- ´<section>´
+Define una sección temática del contenido. Se utiliza para agrupar información relacionada dentro de una página.
+- ´<article>´
+Representa contenido independiente y autónomo que puede entenderse por sí solo, como noticias, publicaciones o entradas de blog.
+- ´<aside>´
+Contiene información complementaria o secundaria relacionada con el contenido principal, como barras laterales, anuncios o enlaces relacionados.
