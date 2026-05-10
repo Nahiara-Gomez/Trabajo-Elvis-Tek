@@ -156,13 +156,14 @@ Sintaxis autocomplete:
 
 - `class="nombre_de_la_clase"`: Se utiliza para asignar uno o más nombres de clase a un elemento, permitiendo aplicar reglas de estilo CSS específicas de manera reutilizable a múltiples elementos.
 
-- ´<header>´
+## HTML5 
+- `<header>`
 Representa el encabezado de una página o de una sección. Generalmente contiene títulos, logotipos, menús de navegación o información introductoria.
-- ´<footer>´
+- `<footer>`
 Representa el pie de una página o sección. Suele incluir información de contacto, derechos de autor, enlaces adicionales o datos del autor.
-- ´<section>´
+- `<section>`
 Define una sección temática del contenido. Se utiliza para agrupar información relacionada dentro de una página.
-- ´<article>´
+- `<article>`
 Representa contenido independiente y autónomo que puede entenderse por sí solo, como noticias, publicaciones o entradas de blog.
-- ´<aside>´
+- `<aside>`
 Contiene información complementaria o secundaria relacionada con el contenido principal, como barras laterales, anuncios o enlaces relacionados.
