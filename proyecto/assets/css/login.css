@@ -1,0 +1,124 @@
+:root{
+    --blancoPuro: #ffffff;
+    --grisPaleta: #c0c0c0;
+    --grisClaro: #ddd9d9;
+    --oscuro:  #58646d;
+    --medio: #47606f;
+    --amarillo:  #eeb906;
+    --azulClaro: #b3cbdf;
+}
+body{
+    background-color: var(--blancoPuro);
+    font-size: 17px;
+    font-family: 'arial', sans-serif;
+    line-height: 1.7;
+    color: black;
+}
+
+header h1,
+header nav{
+    display: inline;
+    vertical-align: middle;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+    display: inline;
+    width: auto;
+    vertical-align: middle;
+    
+}
+
+.menu_principal {
+    display: inline-block;
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+}
+
+.menu_principal li{
+    display: inline;
+    background-color: black;
+    color: white;
+
+    text-decoration: none;
+}
+
+.BotonNavegacion{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.BotonNavegacion:hover{
+    background-color: var(--amarillo);
+    color: white;
+    transition: 0.2s;
+}
+.BotonNavegacion:focus{
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+}
+
+nav ul,
+nav li{
+    display: inline;
+    width: auto;
+}
+.formulario{
+    list-style: none;
+    text-align: center;
+}
+
+fieldset{
+    display: inline-block;
+    width: 500px;
+    height: 250px;
+    background-color: var(--grisClaro);
+}
+
+legend{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+label{
+    color: var(--oscuro);
+    font-weight: bold;
+}
+
+input{
+     width: 250px;
+    height: 35px;
+}
+
+button{
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+    transition: 0.2s;
+}
+
+label,
+button,
+input{
+    font-size: 18px;
+}
+
+.Formulario li{
+    height: 50px;
+}
