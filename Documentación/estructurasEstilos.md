@@ -75,3 +75,41 @@ HTML por medio de sus características, como sus posiciones en el código o sus 
 - `display: block` Convierte al elemento en un bloque que ocupa todo el ancho disponible de la página. Los elementos con este valor comienzan en una nueva línea y permiten modificar propiedades como width y height.
 
 - `display: inline-block` Hace que el elemento permanezca en la misma línea que otros elementos, sin ocupar todo el ancho disponible, pero permitiendo definir dimensiones y otras propiedades de bloque como width y height.
+
+## Flexbox
+`justify-content` : Alinea elementos horizontalmente y acepta las siguientes propiedades:  
+`flex-start` : Alinea elementos al lado izquierdo del contenedor.  
+`flex-end` : Alinea elementos al lado derecho del contenedor.  
+`center` : Alinea elementos en el centro del contenedor.  
+`space-between` : Muestra elemntos con la misma distancia entre ellos.  
+`space-around` : Muestra elementos con la misma separación alrededor de ellos.  
+
+---
+
+`align-items` Esta propiedad alinea elementos verticalmente y acepta los siguientes valores:  
+`flex-start`  Alinea elementos a la parte superior del contenedor.   
+`flex-end`   Alinea elementos a la parte inferior del contenedor.  
+`center`  Alinea elementos al centro del contenedor.  
+`baseline`  Muestra elementos en la linea base del contenedor.  
+`stretch`  Los elementos se estiran para ajustarse al contenedor.  
+   
+---
+
+`flex-direction`  Esta propiedad define la direccion de los elementos en el contenedor, y acepta los siguientes valores:  
+`row`  Los elementos son colocados en la misma direccion del texto.  
+`row-reverse`  Los elementos son colocados en la direccion opuesta al texto.  
+`column`  Los elementos se colocan de arriba hacia abajo.  
+`column-reverse`  Los elementos se colocan de abajo hacia arriba.  
+
+---
+`order` invierte el orden de los elementos en una fila o columna
+
+`aling-self` hace lo mismo que `aling-items` pero en un elemento en especifico
+`align-content` se usa para establecer multiples lineas separadas de otras
+
+`flex-wrap` comprime y ajusta los elementos en una linea
+- nonwrap: cada elemento se ajusta en una sola linea 
+- wrap: los elementos se envuelven alrededor de lineas adicionales
+- wrap-reverse: los elementos se envuelven alrededor de lineas adicionales en reversa
+---
+ `flex-flow:` mezcla las utilidades del flex-direction y el flex, la sintaxis es` <flex-direction> <flex-wrap>`
