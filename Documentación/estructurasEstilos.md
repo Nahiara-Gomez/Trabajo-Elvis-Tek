@@ -113,3 +113,9 @@ HTML por medio de sus características, como sus posiciones en el código o sus 
 - wrap-reverse: los elementos se envuelven alrededor de lineas adicionales en reversa
 ---
  `flex-flow:` mezcla las utilidades del flex-direction y el flex, la sintaxis es` <flex-direction> <flex-wrap>`
+
+---
+`aling-content`: Se puede utilizar esta etiqutea para establecer como multiples lineas estan seperadas una de la otra. Acepta los siguientes valores:
+- flex-start: Las lineas se posicionan en la parte superior del contenedor.
+- flex-end:  Las lineas se posicionan en la parte superior del contenedor.
+
