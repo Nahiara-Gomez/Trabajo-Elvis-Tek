@@ -1,6 +1,6 @@
 # Etiquetas css
 
-## `Selectores css`
+## Selectores css
 Un selector css identifica un elemento HTML el cual se verá afectado por propiedades (las propiedades modifican la apariencia de un elemento)
 
 - Selector por tipo: `a` selecciona todos los elementos del tipo `<a>`.
@@ -115,7 +115,83 @@ HTML por medio de sus características, como sus posiciones en el código o sus 
  `flex-flow:` mezcla las utilidades del flex-direction y el flex, la sintaxis es` <flex-direction> <flex-wrap>`
 
 ---
-`aling-content`: Se puede utilizar esta etiqutea para establecer como multiples lineas estan seperadas una de la otra. Acepta los siguientes valores:
+`align-content`: Se puede utilizar esta etiqueta para establecer como multiples lineas estan separadas una de la otra. Acepta los siguientes valores:
 - flex-start: Las lineas se posicionan en la parte superior del contenedor.
-- flex-end:  Las lineas se posicionan en la parte superior del contenedor.
+- flex-end: Las lineas se posicionan en la parte inferior del contenedor.
+- center: Las lineas se posicionan en el centro (verticalmente hablando) del contenedor.
+- space-between: Las lineas se muestran con la misma distancia entre ellas.
+- space-around: Las lineas se muestran con la misma separacion alrededor de ellas.
+- stretch: Las lineas se estiran para ajustarse al contenedor.
 
+---
+## Box Model
+
+`Padding`: Es el espacio interior que existe dentro de un elemento. Sirve para generar un area transparente alrededor del contenido para evitar que el contenido choque con sus propios bordes.
+
+__Sintaxis:__
+  ```
+  .elemento{
+  padding: 15px;
+  }
+  ```
+`Border`: Permite dibujar una linea visible/borde que enmarca el elemento y el padding. Esta linea puede ser visible, tener grosor, color y diferentes estilos.
+
+__Sintaxis para hacer un borde con un estilo comun (linea continua):__
+```
+.elementoConBorde{
+  border: 4px solid red;
+}
+```
+__Sintaxis para hacer un borde con estilo dashed (linea discontnua):__
+```
+.elementoConBorde{
+  border: 4px dashed red;
+}
+```
+__Sintaxis para hacer un borde con estilo dotted (linea punteada):__
+```
+.elementoConBorde{
+  border: 4px dotted red;
+}
+```
+
+`Margin`: Es el espacio exterior de un elemento. Sirve para definir la separacion entre un elemento y otros. Solo afecta el espacio que ocupa en la pagina, no el tamaño del contenido en si.
+
+__Sintaxis:__
+```
+.elementoConMargen{
+  margin: 10px;
+}
+```
+
+`Box sizing`: Sirve para definir el como se calcula el tamaño total de un elemento, dentro de este calculo se incluyen el padding y el borde. Normalmente cuando declaramos el tamaño de un contenido, por defecto al momento de añadir padding y border, el tamaño del contenido suele aumentar. En cambio con la
+propiedad box sizing, el tamaño se queda igual a lo declarado anteriormente, sin importar que añadamos padding o border.
+
+__Sintaxis (por defecto):__
+```
+box-sizing: content-box;
+```
+__Sintaxis (recomendacio estandar):__
+```
+box-sizing: border-box;
+```
+---
+## Unidades Absolutas y Relativas
+
+`Unidades absolutas` (valores que no varian de tamaño, sin importar desde que dispositivo se vea):
+- px (pixeles): Es el estandar para una pagina web. Recomendado para elementos estructurales que requieran tamaños fijos (como bordes, padding, entre otros).
+
+Medidas hechas exclusivamente para diseños destinados a la impresion fisica:
+- cm (centimetro)
+- mm (milimetro)
+- in (pulgadas)
+
+`Unidades relativas` (valores que varian segun el dispositivo con el cual se vea):
+- %: Depende exclusivamente del tamaño del contenedor, si este cambia de tamaño, el valor tambien lo hara. Es recomendable a la hora de diseñar una pagina que sea responsiva, es decir una pagina que se pueda ver bien en todos los tamaños.
+- em: Se basa en el tamaño de fuente de su contenedor padre. Es util para lograr un efecto cascada en el cual el tamaño de un elemento afecte al siguiente.
+- rem (Root em): Se basa unicamente en el tamaño de fuente establecido en la raiz (<html>). Es util para evitar la acumulacion de cambios en la jerarquia.
+
+`Unidades Viewport` (su tamaño unicamente varia segun el tamaño visible de la ventana o pantalla del dispositivo). Ambos son utiles para que cambien de escala fluidamente sin importar el dispositivo.
+
+- vw (Viewport Width): Representa el 1% del ancho total de la ventana visible. Ej: 100vw representa el 100% del ancho de una pagina.
+- vh (Viewport Height): Representa el 1% del alto total de la ventana visible. Ej: 100vh representa el 100% del alto de una pagina.
