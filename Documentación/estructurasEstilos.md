@@ -169,11 +169,11 @@ propiedad box sizing, el tamaño se queda igual a lo declarado anteriormente, si
 
 __Sintaxis (por defecto):__
 ```
-box-sizing: content-box;
+box-sizing: content-box; (El tamaño establecido puede variar dependiendo padding o border)
 ```
-__Sintaxis (recomendacio estandar):__
+__Sintaxis (recomendación estandar):__
 ```
-box-sizing: border-box;
+box-sizing: border-box; (El tamaño establecido es el tamaño final) mas conveniente si queremos aplicar padding o border
 ```
 ---
 ## Unidades Absolutas y Relativas
