@@ -25,10 +25,33 @@ section{
 }
 
 
-header h1,
-header nav{
-    display: inline;
+header {
+    display: flex;
+    align-items: center;
+    height: 75px;
 }
+header nav{
+    margin: 0 auto;
+    order: 1;
+}
+
+header h1{
+    order: 2;
+}
+header .logo{
+    order: 3;
+}
+
+header h3{
+    order: 2;
+}
+
+header .menu_principal{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
 .BotonNavegacion {
     text-decoration: none;
     background-color: var(--oscuro);
