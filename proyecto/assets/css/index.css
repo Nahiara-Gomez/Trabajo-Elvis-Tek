@@ -19,7 +19,15 @@
     box-sizing: content-box;
 }
 .seccionProductos ul{
-    display: inline
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.seccionProductos li{
+    text-align: center;
 }
 
 .seccionProductos img{
