@@ -29,6 +29,8 @@ header {
     display: flex;
     align-items: center;
     height: 75px;
+    
+    
 }
 header nav{
     margin: 0 auto;
@@ -37,14 +39,12 @@ header nav{
 
 header h1{
     order: 2;
+    
 }
 header .logo{
     order: 3;
 }
 
-header h3{
-    order: 2;
-}
 
 header .menu_principal{
     display: flex;
@@ -75,6 +75,12 @@ nav ul,
 nav li{
     display: inline;
     width: auto;
+}
+#btnMenu{
+    display: none;
+    flex-direction: column;
+    order: 3;
+    
 }
 caption{
     font-weight: bold;
@@ -111,5 +117,41 @@ footer a{
     
 }
 
+@media (max-width: 480px) and (orientation: portrait){
+  
+    nav li{
+        display: none;
+        position: absolute;
+        background-color: #47606f;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    
+    }
+   
+
+    header h1{
+        font-size: 30px;
+        display: inline;
+        
+    }
+    
+    #btnMenu{
+        display: flex;
+        color: black;
+        font-size: 30px;
+        background-color: transparent;
+        border: transparent ;
+        justify-self: flex-end;
+    }
+    #btnMenu:hover{
+        color: var(--amarillo);
+    }
+    .logo{
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+}
 
 
