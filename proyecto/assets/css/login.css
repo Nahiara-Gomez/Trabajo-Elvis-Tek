@@ -100,6 +100,13 @@ input{
     height: 35px;
 }
 
+#btnMenu {
+    display: none;
+    flex-direction: column;
+    order: 3;
+
+}
+
 button{
     width: 120px;
     height: 35px;
@@ -121,4 +128,59 @@ input{
 
 .Formulario li{
     height: 50px;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+
+    header .menu_principal {
+        display: none;
+    }
+
+    .menu_principal {
+        display: none;
+        position: absolute;
+        text-align: center;
+        background-color: black;
+        flex-direction: column;
+        top: 80px;
+        padding: 50px;
+
+    }
+
+    header {
+        position: relative;
+        max-width: 100%;
+        align-self: center;
+    }
+
+    header h1 {
+        order: 1;
+        font-size: 1.8rem;
+        display: inline;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+
+    #btnMenu {
+        display: inline;
+        color: black;
+        font-size: 30px;
+        background-color: transparent;
+        border: transparent;
+    }
+
+    #btnMenu:hover {
+        color: var(--amarillo);
+    }
+    
+    .BotonNavegacion:hover {
+        color: var(--amarillo);
+        color: var(--blancoPuro);
+    }
+
+    .logo {
+        order: 2;
+        max-width: 100px;
+        max-height: 100px;
+    }
 }

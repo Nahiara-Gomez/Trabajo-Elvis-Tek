@@ -1,27 +1,32 @@
-:root{
+* {
+    box-sizing: border-box;
+}
+
+:root {
     --blancoPuro: #ffffff;
     --grisPaleta: #c0c0c0;
     --grisClaro: #ddd9d9;
-    --oscuro:  #58646d;
+    --oscuro: #58646d;
     --medio: #47606f;
-    --amarillo:  #eeb906;
+    --amarillo: #eeb906;
     --azulClaro: #b3cbdf;
 }
 
 
-body{
-    background-color:var(--azulClaro);
+body {
+    background-color: var(--azulClaro);
     font-size: 17px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.7;
-    color:var(--oscuro);
+    color: var(--oscuro);
     max-width: 100%;
-} 
+    padding: 10px;
+}
 
-section{
+section {
     background-color: var(--blancoPuro);
     max-width: 100%;
-    
+    padding: 0px 20px 0px 20px;
 }
 
 
@@ -29,24 +34,26 @@ header {
     display: flex;
     align-items: center;
     height: 75px;
-    
-    
+    padding: 20px;
+
 }
-header nav{
+
+header nav {
     margin: 0 auto;
     order: 1;
 }
 
-header h1{
+header h1 {
     order: 2;
-    
+
 }
-header .logo{
+
+header .logo {
     order: 3;
 }
 
 
-header .menu_principal{
+header .menu_principal {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -57,52 +64,59 @@ header .menu_principal{
     background-color: var(--oscuro);
     color: var(--grisClaro);
     font-size: 18px;
-    
     text-transform: uppercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    ;
 
 }
-.BotonNavegacion:hover{
+
+.BotonNavegacion:hover {
     background-color: var(--amarillo);
     color: var(--oscuro);
 }
-.BotonNavegacion:focus{
+
+.BotonNavegacion:focus {
     background-color: var(--amarillo);
     color: var(--oscuro);
 }
 
 nav ul,
-nav li{
+nav li {
     display: inline;
     width: auto;
 }
-#btnMenu{
+
+#btnMenu {
     display: none;
     flex-direction: column;
     order: 3;
-    
+
 }
-caption{
+
+caption {
     font-weight: bold;
 }
-th{
+
+th {
     background-color: var(--grisClaro);
     font-size: 19px;
     min-height: 80px;
     color: var(--oscuro);
 }
-tr:nth-child(even) td{
- background-color:#bfc9cf;
- color: var(--oscuro);
+
+tr:nth-child(even) td {
+    background-color: #bfc9cf;
+    color: var(--oscuro);
 }
-footer  {
+
+footer {
     background-color: var(--oscuro);
     min-height: 80px;
     color: var(--blancoPuro);
     font-size: 18px;
 }
 
-footer a{
+footer a {
     background-color: var(--amarillo);
     max-height: 100%;
 }
@@ -114,44 +128,81 @@ footer a{
     display: inline;
     width: auto;
     vertical-align: middle;
-    
+
 }
 
-@media (max-width: 480px) and (orientation: portrait){
-  
-    nav li{
+@media (max-width: 480px) and (orientation: portrait) {
+
+    header .menu_principal {
+        display: none;
+    }
+
+    .menu_principal {
         display: none;
         position: absolute;
-        background-color: #47606f;
-        width: 100%;
-        flex-direction: column;
         text-align: center;
-    
-    }
-   
+        background-color: var(--oscuro);
+        flex-direction: column;
+        top: 80px;
+        padding: 15px;
 
-    header h1{
-        font-size: 30px;
-        display: inline;
-        
     }
-    
-    #btnMenu{
+
+    header {
+        position: relative;
+        max-width: 100%;
+        align-self: center;
+    }
+
+    header h1 {
+        order: 1;
+        font-size: 1.8rem;
+        display: inline;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+
+    #btnMenu {
         display: flex;
         color: black;
         font-size: 30px;
         background-color: transparent;
-        border: transparent ;
-        justify-self: flex-end;
+        border: transparent;
     }
-    #btnMenu:hover{
+
+    #btnMenu:hover {
         color: var(--amarillo);
     }
-    .logo{
+
+    .BotonNavegacion:hover {
+        color: var(--amarillo);
+        color: var(--blancoPuro);
+    }
+
+    .logo {
+        order: 2;
         max-width: 100px;
         max-height: 100px;
     }
 
+
+    tr {
+        justify-content: center;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    th {
+        justify-content: center;
+        font-size: 14px;
+        width: 100%;
+
+    }
+
+    section {
+        flex-direction: column;
+        max-width: 90%;
+        justify-content: center;
+    }
 }
-
-
