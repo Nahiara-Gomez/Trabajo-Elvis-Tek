@@ -7,6 +7,11 @@
     --amarillo:  #eeb906;
     --azulClaro: #b3cbdf;
 }
+
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: var(--blancoPuro);
     font-size: 17px;
@@ -15,11 +20,13 @@ body{
     color: black;
 }
 
-header h1,
-header nav{
-    display: inline;
-    vertical-align: middle;
+header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
 }
+
 
 .logo {
     max-width: 100px;
@@ -30,22 +37,34 @@ header nav{
     
 }
 
-.menu_principal {
-    display: inline-block;
-    list-style: none;
-    height: 50px;
-    line-height: 50px;
+.menu_principal{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
 .menu_principal li{
-    display: inline;
-    background-color: black;
-    color: white;
+    display: block;
+}
 
-    text-decoration: none;
+.menu_principal li a{
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .BotonNavegacion{
+    display: inline-block;
     width: 150px;
     height: 50px;
     background-color: black;
@@ -72,7 +91,7 @@ nav li{
     display: inline;
     width: auto;
 }
-.formulario{
+.Formulario{
     list-style: none;
     text-align: center;
 }
@@ -101,9 +120,9 @@ input{
 }
 
 #btnMenu {
-    display: none;
+    display: inline;
     flex-direction: column;
-    order: 3;
+    order: 6;
 
 }
 
@@ -147,26 +166,31 @@ input{
     }
 
     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         position: relative;
         max-width: 100%;
         align-self: center;
     }
 
     header h1 {
-        order: 1;
-        font-size: 1.8rem;
+        font-size: 20px;
         display: inline;
         align-items: center;
         justify-content: flex-start;
-
+        margin: 0;
+        white-space: nowrap;
     }
 
     #btnMenu {
         display: inline;
         color: black;
-        font-size: 30px;
+        font-size: 25px;
         background-color: transparent;
         border: transparent;
+        margin: 0;
+        padding: 0;
     }
 
     #btnMenu:hover {
@@ -179,8 +203,39 @@ input{
     }
 
     .logo {
-        order: 2;
-        max-width: 100px;
-        max-height: 100px;
+        width: 50px;
+        height: auto;
     }
+
+    fieldset{
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Formulario{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Formulario ul{
+        padding: 0;
+    }
+
+    .Formulario li{
+        list-style: none;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    button{
+        width: 100%;
+    }
+
+
 }
