@@ -1,13 +1,15 @@
-document.getElementById("btnMenu").addEventListener("click", function () {
+const btnMenu = document.getElementById("btnMenu");
+const btnCerrar = document.getElementById("btnCerrar");
+const menu = document.querySelector(".menu_principal");
 
-    document.querySelector(".menu_principal").style.display = "flex";
-    document.querySelector("btnCerrar").style.display = "flex";
-        document.querySelector("btnMenu").style.display = "none";
+btnMenu.addEventListener("click", function () {
+    menu.style.display = "flex";
+    btnMenu.style.display = "none";
+    btnCerrar.style.display = "flex";
 });
 
-document.getElementById("btnCerrar").addEventListener("click", function () {
-
-        document.querySelector(".menu_principal").style.display = "none";
-    document.getElementById("btnCerrar").style.display = "none";
-    document.getElementById("btnMenu").style.display = "flex";
+btnCerrar.addEventListener("click", function () {
+    menu.style.display = "none";
+    btnCerrar.style.display = "none";
+    btnMenu.style.display = "flex";
 });
