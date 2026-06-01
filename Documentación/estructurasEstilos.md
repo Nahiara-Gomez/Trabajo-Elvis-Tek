@@ -197,3 +197,17 @@ Medidas hechas exclusivamente para diseños destinados a la impresion fisica:
 
 - vw (Viewport Width): Representa el 1% del ancho total de la ventana visible. Ej: 100vw representa el 100% del ancho de una pagina.
 - vh (Viewport Height): Representa el 1% del alto total de la ventana visible. Ej: 100vh representa el 100% del alto de una pagina.
+
+## POSITIONS
+`static (Por defecto)` Es el comportamiento natural del navegador. Los elementos se posicionan uno detrás de otro según el orden del código HTML (el flujo normal del documento).Las propiedades espaciales no tienen ningún efecto.
+
+
+`Relative` El elemento sigue el flujo normal del documento, pero se le permite desplazarse respecto a su posición original sin alterar el espacio que ocupaba inicialmente.El espacio original que ocupaba el elemento se queda "vacío", pero otros elementos no se pueden reubicar para llenar este espacio.
+
+
+`Absolute` El elemento se sale por completo del flujo normal de la página (los demás elementos actúan como si este no existiera y ocupan su espacio). El elemento busca hacia arriba en su estructura HTML hasta encontrar al primer familiar (padre, abuelo) que tenga position: relative (o cualquier otra posición distinta a static). Ese familiar se convierte en su marco de referencia. Si no encuentra ninguno, se posiciona respecto a la página entera.
+
+
+`Fixed` Es muy parecido a absolute, pero con la difrenecia, de que el elemento se posiciona respecto a la ventana del navegador (viewport). Esto significa que aunque el usuario haga scroll (baje en la página), el elemento se quedará congelado en el mismo lugar de la pantalla.
+
+`Sticky` Es una mezcla entre relative y fixed. El elemento se comporta como relative (sigue el flujo normal) hasta que el usuario hace scroll y el elemento llega a un punto específico (definido por top, por ejemplo). En ese momento, se "congela" y actúa como fixed dentro de su contenedor padre.
