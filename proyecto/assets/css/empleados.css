@@ -1,0 +1,26 @@
+:root {
+    --blancoPuro: #ffffff;
+    --grisPaleta: #c0c0c0;
+    --grisClaro: #ddd9d9;
+    --oscuro: #58646d;
+    --medio: #47606f;
+    --amarillo: #eeb906;
+    --azulClaro: #b3cbdf;
+}
+
+.formularioAltaUsuario {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--blancoPuro);
+    padding: 20px;
+    border: 1px solid var(--oscuro);
+}
+
+.formularioAltaUsuario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
