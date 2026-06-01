@@ -99,7 +99,7 @@ nav li {
     width: auto;
 }
 
-#btnAbrir {
+#btnMenu {
     display: none;
     flex-direction: column;
     order: 3;
@@ -195,7 +195,7 @@ footer a {
 
     }
 
-    #btnAbrir {
+    #btnMenu {
         display: flex;
         color: black;
         font-size: 30px;
@@ -203,7 +203,7 @@ footer a {
         border: transparent;
     }
 
-    #btnAbrir:hover {
+    #btnMenu:hover {
         color: var(--amarillo);
     }
     
