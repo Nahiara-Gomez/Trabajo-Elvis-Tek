@@ -79,6 +79,7 @@ header .menu_principal {
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     ;
+    
 
 }
 
@@ -98,11 +99,20 @@ nav li {
     width: auto;
 }
 
-#btnMenu {
+#btnAbrir {
     display: none;
     flex-direction: column;
     order: 3;
 
+}
+#btnCerrar{
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  order: 3;
+  flex-direction: column;
+  display: none;
 }
 
 caption {
@@ -155,8 +165,11 @@ footer a {
         text-align: center;
         background-color: var(--oscuro);
         flex-direction: column;
-        top: 80px;
+        top: 56px;
+        right:0px;
+        left: 50%;
         padding: 15px;
+
 
     }
 
@@ -164,6 +177,13 @@ footer a {
         position: relative;
         max-width: 100%;
         align-self: center;
+        position: sticky;
+         top: 0; 
+        z-index: 10;
+        background:var(--oscuro);
+        color:var(--blancoPuro);
+        padding: 0;
+        
     }
 
     header h1 {
@@ -175,7 +195,7 @@ footer a {
 
     }
 
-    #btnMenu {
+    #btnAbrir {
         display: flex;
         color: black;
         font-size: 30px;
@@ -183,9 +203,12 @@ footer a {
         border: transparent;
     }
 
-    #btnMenu:hover {
+    #btnAbrir:hover {
         color: var(--amarillo);
     }
+    
+
+    
 
     .BotonNavegacion:hover {
         color: var(--amarillo);
@@ -201,14 +224,16 @@ footer a {
 
     tr {
         justify-content: center;
-        font-size: 14px;
+        font-size: 13px;
         width: 100%;
+          
     }
 
     th {
         justify-content: center;
-        font-size: 14px;
+        font-size: 13px;
         width: 100%;
+         
 
     }
 
