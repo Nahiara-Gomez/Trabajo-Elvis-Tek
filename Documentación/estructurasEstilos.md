@@ -75,6 +75,8 @@ HTML por medio de sus características, como sus posiciones en el código o sus 
 - `display: block` Convierte al elemento en un bloque que ocupa todo el ancho disponible de la página. Los elementos con este valor comienzan en una nueva línea y permiten modificar propiedades como width y height.
 
 - `display: inline-block` Hace que el elemento permanezca en la misma línea que otros elementos, sin ocupar todo el ancho disponible, pero permitiendo definir dimensiones y otras propiedades de bloque como width y height.
+- `right` te permite configurar la distancia del elemento a la izquierda
+- `bottom` te permite configurar la distancia del elemento al final de la pantalla
 
 ## Flexbox
 `justify-content` : Alinea elementos horizontalmente y acepta las siguientes propiedades:  

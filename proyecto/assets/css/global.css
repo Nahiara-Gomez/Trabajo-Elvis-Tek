@@ -10,8 +10,20 @@
     --medio: #47606f;
     --amarillo: #eeb906;
     --azulClaro: #b3cbdf;
+    --azulMedio: #7bb3df;
 }
 
+.botonSubir{
+    position: fixed;
+    display: flex;
+    bottom: 5%;
+    right: 5%;
+    padding: 5px 15px;
+    background-color: var(--azulMedio);
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+}
 
 body {
     background-color: var(--azulClaro);

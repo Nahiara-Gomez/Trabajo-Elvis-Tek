@@ -46,6 +46,7 @@
 ```
 
 - `<button>...</button>`: Te permite crear un boton.
+`onclick`: Te permite configurar que va a hacer el boton cuando se le haga click.
 
 - `<a>..</a>`: Se usa para poner hipervinculos en la pagina, para que funcione se debe usar el atributo `href`, que es donde se encuentra la direccion web a la que se dirigira.
 
