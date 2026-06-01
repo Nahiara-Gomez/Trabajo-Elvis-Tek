@@ -1,89 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empleados</title>
-     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/empleados.css">
 </head>
+
 <body>
+
     <h1>Empleados</h1>
-    <button onclick="agregarEmpleado()">Agregar</button>
+
+    <button id="btnAltaUsuario">Agregar</button>
+
+    <section class="formularioAltaUsuario">
+
+        <form>
+
+            <h2>Alta de empleado</h2>
+
+        <label for="cedula">Cédula</label>
+        <input type="text" id="cedula">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido">
+
+        <label for="cargo">Cargo</label>
+        <input type="text" id="cargo">
+
+            <button type="button" id="btnGuardarUsuario">Guardar</button>
+            <button type="button" id="btnCerrarAltaUsuario">Cerrar</button>
+
+        </form>
+
+    </section>
+
     <table border="1" id="tabla">
+
         <tr>
             <th>Cédula</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Cargo</th>
+            <th>Acciones</th>
         </tr>
-         <tr>
-    <td>12345678</td>
-    <td>Juan</td>
-    <td>Pérez</td>
-    <td>Vendedor</td>
-    <td>
-      <button onclick="modificar(this)">Modificar</button>
-      <button onclick="borrar(this)">Borrar</button>
-    </td>
-  </tr>
-</table>
-   <!--> <script>
-function borrar(boton) {
-  let fila = boton.parentNode.parentNode;
-  fila.remove();
-}
 
-function modificar(boton) {
-  let fila = boton.parentNode.parentNode;
-  let celdas = fila.getElementsByTagName("td");
+        <tr>
+            <td>12345678</td>
+            <td>Juan</td>
+            <td>Pérez</td>
+            <td>Vendedor</td>
+            <td>
+                <button onclick="modificar(this)">Modificar</button>
+                <button onclick="borrar(this)">Eliminar</button>
+            </td>
+        </tr>
 
-  let cedula = prompt("Cédula:", celdas[0].innerText);
+    </table>
 
-
-  if (!cedula || !/^\d+$/.test(cedula)) {
-    alert("La cédula debe tener solo números");
-    return;
-  }
-  let nombre = prompt("Nombre:", celdas[1].innerText);
-  let apellido = prompt("Apellido:", celdas[2].innerText);
-  let cargo = prompt("Cargo:", celdas[3].innerText);
-
-  if (cedula && nombre && apellido && cargo) {
-    celdas[0].innerText = cedula;
-    celdas[1].innerText = nombre;
-    celdas[2].innerText = apellido;
-    celdas[3].innerText = cargo;
-  }
-}
-
-function agregarEmpleado() {
-
-  let cedula = prompt("Cédula:");
-
-if (!/^\d+$/.test(cedula)) {
-  alert("La cédula debe tener solo números");
-  return;
-}  
-  let nombre = prompt("Nombre:");
-  let apellido = prompt("Apellido:");
-  let cargo = prompt("Cargo:");
-
-  if (!cedula || !nombre || !apellido || !cargo) return;
-
-  let tabla = document.getElementById("tabla");
-  let fila = tabla.insertRow();
-
-  fila.insertCell(0).innerText = cedula;
-  fila.insertCell(1).innerText = nombre;
-  fila.insertCell(2).innerText = apellido;
-  fila.insertCell(3).innerText = cargo;
-
-  let acciones = fila.insertCell(4);
-  acciones.innerHTML = `
-    <button onclick="modificar(this)">Modificar</button>
-    <button onclick="borrar(this)">Borrar</button>
-  `;
-}
-</script> <!-->
+    <script src="assets/JS/tablaEmpleados.js"></script>
 </body>
+
 </html>
