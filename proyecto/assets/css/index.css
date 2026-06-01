@@ -1,5 +1,6 @@
 :root{
 --azulClaro: #b3cbdf;
+--azulMedio: #7bb3df;
 --blancoPuro: #ffffff;
 } 
 
@@ -13,6 +14,22 @@
     height: 250px;
     box-sizing: content-box;
     padding: 0px 0px 20px 0px;
+}
+.botonSubir{
+    position: fixed;
+    display: flex;
+    bottom: 5%;
+    right: 5%;
+    padding: 5px 15px;
+    background-color: var(--azulMedio);
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el ratón por encima */
+.botonSubir:hover {
+    background-color: #0056b3;
 }
 
 .personaTestimonio{
