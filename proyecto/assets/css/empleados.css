@@ -24,3 +24,62 @@
     flex-direction: column;
     gap: 10px;
 }
+
+#tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla th,
+#tabla td {
+    padding: 8px;
+    text-align: center;
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #btnAltaUsuario {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .formularioAltaUsuario {
+        width: 90%;
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .formularioAltaUsuario input {
+        width: 100%;
+    }
+
+    .formularioAltaUsuario button {
+        width: 100%;
+    }
+
+   #tabla {
+    width: 100%;
+}
+
+#tabla th,
+#tabla td {
+    font-size: 11px;
+    padding: 2px;
+}
+
+#tabla button {
+    font-size: 10px;
+    width: auto;
+    padding: 2px;
+}
+}
