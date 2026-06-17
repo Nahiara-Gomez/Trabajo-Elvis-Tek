@@ -8,15 +8,13 @@
     --azulClaro: #b3cbdf;
 }
 
-.formularioAltaUsuario {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--blancoPuro);
-    padding: 20px;
-    border: 1px solid var(--oscuro);
+
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 .formularioAltaUsuario form {
