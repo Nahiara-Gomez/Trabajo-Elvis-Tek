@@ -1,112 +1,121 @@
+/**
+ * CONSTANTES Y VARIABLES
+ */
+
+// dialog
+const modal = document.getElementById("modalEmpleado");
+
+// formulario
+const formulario = document.getElementById("formularioEmpleado");
+
+// botones
+const btnAltaUsuario = document.getElementById("btnAltaUsuario");
+const btnCerrarAltaUsuario = document.getElementById("btnCerrarAltaUsuario");
+
+// tabla
+const tabla = document.getElementById("tabla");
+
+// campos
+const entradaCedula = document.getElementById("cedula");
+const entradaNombre = document.getElementById("nombre");
+const entradaApellido = document.getElementById("apellido");
+const entradaCargo = document.getElementById("cargo");
+
 // variable global que guarda la fila que se esta editando
 let filaEditando = null;
 
-// obtener el dialog por su id
-const modal = document.getElementById("modalEmpleado");
 
-// obtener el formulario
-const formulario = document.getElementById("formularioEmpleado");
+/**
+ * LOCAL STORAGE
+ */
 
-// abre el formulario
-document.getElementById("btnAltaUsuario").addEventListener("click", function () {
+function cargarEmpleadosLocal() {
 
-    // filaEditando = null; o sea que no va a existir ninguna fila
-    filaEditando = null;
+    const empleadosGuardados = localStorage.getItem("empleados");
 
-    // limpia los campos
-    document.getElementById("cedula").value = "";
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
-    document.getElementById("cargo").value = "";
-
-    // muestra el formulario
-    modal.showModal();
-
-});
-
-// boton para cerrar el formulario
-document.getElementById("btnCerrarAltaUsuario").addEventListener("click", function () {
-
-    // oculta el formulario
-    modal.close();
-
-});
-
-// captura el submit
-formulario.addEventListener("submit", function (event) {
-
-    // evita cargar la pagina
-    event.preventDefault();
-
-    // lee lo que escribio el usuario
-    let cedula = document.getElementById("cedula").value;
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let cargo = document.getElementById("cargo").value;
-
-    // detecta los campos vacios
-    if (!cedula || !nombre || !apellido || !cargo) {
-        alert("Complete todos los campos"); // si hay campos vacios muestra el mensaje
-        return;
+    if (empleadosGuardados === null) {
+        return [];
     }
 
-    // validar que cedula solo contenga numeros
-    if (!/^\d+$/.test(cedula)) {
-        alert("La cédula debe contener solamente números");
-        return;
+    return JSON.parse(empleadosGuardados);
+
+}
+
+function actualizarEmpleadosLocal(empleados) {
+
+    localStorage.setItem(
+        "empleados",
+        JSON.stringify(empleados)
+    );
+
+}
+
+function guardarEmpleadoLocal(empleado) {
+
+    const empleados = cargarEmpleadosLocal();
+
+    empleados.push(empleado);
+
+    actualizarEmpleadosLocal(empleados);
+
+}
+
+function actualizarTabla() {
+
+    
+    tabla.replaceChildren();
+
+    const empleados = cargarEmpleadosLocal();
+
+    for (const empleado of empleados) {
+        agregarEmpleado(empleado);
     }
 
-    // validar que cedula contenga 8 numeros
-    if (!/^\d{8}$/.test(cedula)) {
-        alert("La cédula debe tener 8 números");
-        return;
-    }
+}
 
-    // crea el objeto
-    const empleado = {
-        cedula: cedula,
-        nombre: nombre,
-        apellido: apellido,
-        cargo: cargo
+/**
+ * OBTENCION DE DATOS
+ */
+
+function obtenerDatosFormulario() {
+
+    return {
+        cedula: entradaCedula.value,
+        nombre: entradaNombre.value,
+        apellido: entradaApellido.value,
+        cargo: entradaCargo.value
     };
 
-    // (filaEditando === null) verifica si esta editando
-    if (filaEditando === null) {
+}
 
-        // si no esta editando agrega la fila
-        agregarEmpleado(empleado);
 
-    } else {
+/**
+ * GESTION DEL MODAL
+ */
 
-        // obtiene todas las celdas de la fila
-        let celdas = filaEditando.getElementsByTagName("td");
+function abrirAltaUsuario() {
 
-        // reemplaza los datos
-        celdas[0].innerText = empleado.cedula;
-        celdas[1].innerText = empleado.nombre;
-        celdas[2].innerText = empleado.apellido;
-        celdas[3].innerText = empleado.cargo;
+    filaEditando = null;
+    formulario.reset();
+    modal.showModal();
 
-        // deja de editar, para que el proximo submit agregue una fila nueva
-        filaEditando = null;
+}
 
-    }
+function cerrarAltaUsuario() {
 
-    // ocultar formulario
     modal.close();
 
-});
+}
 
-// funcion para agregar un empleado, recibe el objeto y crea toda la fila
+
+/**
+ * GESTION DE LA TABLA
+ */
+
 function agregarEmpleado(empleado) {
 
-    // busca la tabla por id
-    let tabla = document.getElementById("tabla");
-
-    // crea una fila
     let fila = document.createElement("tr");
 
-    // crea las celdas con los valores que agrego el usuario
     let tdCedula = document.createElement("td");
     tdCedula.innerText = empleado.cedula;
 
@@ -119,66 +128,135 @@ function agregarEmpleado(empleado) {
     let tdCargo = document.createElement("td");
     tdCargo.innerText = empleado.cargo;
 
-    // crea celda acciones, contiene los botones de modificar y eliminar
     let tdAcciones = document.createElement("td");
 
-    // crea boton modificar
     let btnModificar = document.createElement("button");
-    btnModificar.innerText = "Modificar"; // asocia evento con el boton
+    btnModificar.innerText = "Modificar";
     btnModificar.onclick = function () {
         modificar(this);
     };
 
-    // crea boton eliminar
     let btnEliminar = document.createElement("button");
-    btnEliminar.innerText = "Eliminar"; // asocia evento con el boton
+    btnEliminar.innerText = "Eliminar";
     btnEliminar.onclick = function () {
         borrar(this);
     };
 
-    // agrega los botones a la celda
     tdAcciones.appendChild(btnModificar);
     tdAcciones.appendChild(btnEliminar);
 
-    // arma la fila completa
     fila.appendChild(tdCedula);
     fila.appendChild(tdNombre);
     fila.appendChild(tdApellido);
     fila.appendChild(tdCargo);
     fila.appendChild(tdAcciones);
 
-    // agrega la fila a la tabla
     tabla.appendChild(fila);
 
 }
 
-// recibe el boton eliminar
 function borrar(boton) {
 
-    // selecciona la fila (boton.parentNode.parentNode;) = recibe boton -> td -> tr
     let fila = boton.parentNode.parentNode;
 
-    // borra toda la fila (tr)
-    fila.remove();
+    let cedula = fila.children[0].innerText;
+
+    // cargar empleados del localStorage
+    let empleados = cargarEmpleadosLocal();
+
+    // filtrar eliminando el que coincide con la cédula
+    let empleadosActualizados = empleados.filter(
+        empleado => empleado.cedula !== cedula
+    );
+
+    // guardar de nuevo en localStorage
+    actualizarEmpleadosLocal(empleadosActualizados);
+
+    // actualizar la tabla visual
+    actualizarTabla();
 
 }
 
-// recibe boton modificar
 function modificar(boton) {
 
-    // guarda la fila que se esta editando
     filaEditando = boton.parentNode.parentNode;
 
-    // obtiene las celdas
     let celdas = filaEditando.getElementsByTagName("td");
 
-    // carga datos, pasa los datos de la fila a los inputs
-    document.getElementById("cedula").value = celdas[0].innerText;
-    document.getElementById("nombre").value = celdas[1].innerText;
-    document.getElementById("apellido").value = celdas[2].innerText;
-    document.getElementById("cargo").value = celdas[3].innerText;
+    entradaCedula.value = celdas[0].innerText;
+    entradaNombre.value = celdas[1].innerText;
+    entradaApellido.value = celdas[2].innerText;
+    entradaCargo.value = celdas[3].innerText;
 
-    // muestra el formulario, el usuario ve los datos cargados y los puede editar
     modal.showModal();
 
 }
+
+
+/**
+ * VALIDACIONES
+ */
+
+function validarFormulario(empleado) {
+
+    if (!empleado.cedula || !empleado.nombre || !empleado.apellido || !empleado.cargo) {
+        alert("Complete todos los campos");
+        return false;
+    }
+
+    if (!/^\d+$/.test(empleado.cedula)) {
+        alert("La cédula debe contener solamente números");
+        return false;
+    }
+
+    if (!/^\d{8}$/.test(empleado.cedula)) {
+        alert("La cédula debe tener 8 números");
+        return false;
+    }
+
+    return true;
+
+}
+
+
+/**
+ * EVENTOS
+ */
+
+btnAltaUsuario.addEventListener("click", abrirAltaUsuario);
+
+btnCerrarAltaUsuario.addEventListener("click", cerrarAltaUsuario);
+
+formulario.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const empleado = obtenerDatosFormulario();
+
+    if (!validarFormulario(empleado)) {
+        return;
+    }
+
+    if (filaEditando === null) {
+
+        guardarEmpleadoLocal(empleado);
+
+    } else {
+
+        let celdas = filaEditando.getElementsByTagName("td");
+
+        celdas[0].innerText = empleado.cedula;
+        celdas[1].innerText = empleado.nombre;
+        celdas[2].innerText = empleado.apellido;
+        celdas[3].innerText = empleado.cargo;
+
+        filaEditando = null;
+    }
+
+    actualizarTabla();
+
+    modal.close();
+
+});
+
+actualizarTabla();

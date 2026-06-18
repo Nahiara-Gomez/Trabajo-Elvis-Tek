@@ -50,7 +50,7 @@ Ejemplos:
     - docs/estandares-codificacion
     - refactor/optimizacion-consultas
     - test/pruebas-formulario
----
+
 Cuando exista un identificador de tarea o incidencia, podrá incluirse al inicio del nombre:
 
     - feature/15-registro-usuarios
@@ -108,14 +108,14 @@ Antes de integrar cambios se deberá verificar que:
     - Se hayan realizado pruebas básicas del funcionamiento.
     - No contenga codigo duplicado  y se mantengan al minimo el numero de clases y metodos 
     - Sea claramente legible.
----
+
 La revisión por pares no solo verificará la funcionalidad, sino también la limpieza del código, asegurando que se hayan eliminado nombres desinformativos, funciones excesivamente largas (ideal < 20 líneas) y cualquier duplicación innecesaria.
 
 ## 11. Gestión de ramas
 Para facilitar el trabajo colaborativo y evitar conflictos durante el desarrollo, cada nueva funcionalidad, corrección o mejora deberá realizarse en una rama independiente.
 ### Organización de ramas
 - Se creara una rama por cada funcionalidad.
-- En caso de que el codigo este desordenado crear una rama `refractor/` especifica para limpiarlo antes de implementar codigo nuevo.
+
 - La rama main será la rama principal del proyecto y contendrá únicamente versiones estables y funcionales.
 
 
@@ -124,7 +124,7 @@ Para facilitar el trabajo colaborativo y evitar conflictos durante el desarrollo
 - Cada integrante creará una rama para la tarea que tenga asignada.
 - Al finalizar el desarrollo, los cambios deberán revisarse antes de fusionarse con `main`.
 - Una vez completada la integración, la rama podrá eliminarse para mantener el repositorio limpio y organizado.
----
+
 Este esquema facilita el trabajo simultáneo entre los integrantes del equipo, mejora la trazabilidad de los cambios y reduce la posibilidad de conflictos durante las fusiones.
 ### Políticas de Integración y Etiquetado:
 - **Criterio de Integración:**
@@ -142,9 +142,9 @@ Con el objetivo de mantener un historial claro y facilitar el seguimiento de cam
 Cada mensaje de commit deberá respetar el siguiente formato:
 
 tipo(alcance-opcional): descripción
----
+
 El alcance es opcional y permite indicar el módulo o componente afectado.
----
+
 Ejemplos:
 
 feat(login): agregar validación de contraseña
