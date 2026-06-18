@@ -73,6 +73,36 @@ function actualizarTabla() {
 
 }
 
+function modificarEmpleadoLocal(empleadoEditado) {
+
+    const empleados = cargarEmpleadosLocal();
+
+    const empleado = empleados.find(
+        e => e.cedula === empleadoEditado.cedula
+    );
+
+    if (empleado === undefined) {
+        return;
+    }
+
+    empleado.nombre = empleadoEditado.nombre;
+    empleado.apellido = empleadoEditado.apellido;
+    empleado.cargo = empleadoEditado.cargo;
+
+    actualizarEmpleadosLocal(empleados);
+}
+
+function eliminarEmpleadoLocal(cedula) {
+
+    const empleados = cargarEmpleadosLocal();
+
+    const empleadosActualizados = empleados.filter(
+        e => e.cedula !== cedula
+    );
+
+    actualizarEmpleadosLocal(empleadosActualizados);
+}
+
 /**
  * OBTENCION DE DATOS
  */
@@ -103,9 +133,18 @@ function abrirAltaUsuario() {
 
 function cerrarAltaUsuario() {
 
+    filaEditando = null;
+    formulario.reset();
     modal.close();
 
 }
+
+modal.addEventListener("cancel", function () {
+
+    filaEditando = null;
+    formulario.reset();
+
+});
 
 
 /**
@@ -157,22 +196,12 @@ function agregarEmpleado(empleado) {
 
 function borrar(boton) {
 
-    let fila = boton.parentNode.parentNode;
+    const fila = boton.parentNode.parentNode;
 
-    let cedula = fila.children[0].innerText;
+    const cedula = fila.children[0].innerText;
 
-    // cargar empleados del localStorage
-    let empleados = cargarEmpleadosLocal();
+    eliminarEmpleadoLocal(cedula);
 
-    // filtrar eliminando el que coincide con la cédula
-    let empleadosActualizados = empleados.filter(
-        empleado => empleado.cedula !== cedula
-    );
-
-    // guardar de nuevo en localStorage
-    actualizarEmpleadosLocal(empleadosActualizados);
-
-    // actualizar la tabla visual
     actualizarTabla();
 
 }
@@ -181,7 +210,7 @@ function modificar(boton) {
 
     filaEditando = boton.parentNode.parentNode;
 
-    let celdas = filaEditando.getElementsByTagName("td");
+    const celdas = filaEditando.getElementsByTagName("td");
 
     entradaCedula.value = celdas[0].innerText;
     entradaNombre.value = celdas[1].innerText;
@@ -243,12 +272,7 @@ formulario.addEventListener("submit", function (event) {
 
     } else {
 
-        let celdas = filaEditando.getElementsByTagName("td");
-
-        celdas[0].innerText = empleado.cedula;
-        celdas[1].innerText = empleado.nombre;
-        celdas[2].innerText = empleado.apellido;
-        celdas[3].innerText = empleado.cargo;
+        modificarEmpleadoLocal(empleado);
 
         filaEditando = null;
     }
@@ -256,7 +280,6 @@ formulario.addEventListener("submit", function (event) {
     actualizarTabla();
 
     modal.close();
-
 });
 
 actualizarTabla();
