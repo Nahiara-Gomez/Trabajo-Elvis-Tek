@@ -36,11 +36,25 @@ El presente documento establece las normas y buenas prácticas para el desarroll
 -Ejemplos:
     - `Usuario`
     - `GestorPedidos`
-### Clases
-- Utilizarán la convención PascalCase.
--Ejemplos:
-    - `Usuario`
-    - `GestorPedidos`
+### Ramas
+Las ramas deberán seguir el siguiente formato:
+
+tipo/nombre-descriptivo
+
+Ejemplos:
+
+    - feature/registro-usuarios
+    - feature/alta-empleados
+    - bugfix/error-validacion-cedula
+    - hotfix/menu-responsive
+    - docs/estandares-codificacion
+    - refactor/optimizacion-consultas
+    - test/pruebas-formulario
+---
+Cuando exista un identificador de tarea o incidencia, podrá incluirse al inicio del nombre:
+
+    - feature/15-registro-usuarios
+    - bugfix/22-error-login
 
 ## 3. Sangria y formato
 - Utilizar 1 tabuacion por cada nivel de indentacion
@@ -62,37 +76,30 @@ El presente documento establece las normas y buenas prácticas para el desarroll
 - Las funciones deben hacer algo o responder algo, pero no ambas cosas. Es decir una misma funcion puede alterar el estado de un objeto o mostrar informacion del mismo, no las dos cosas
 - No pasar un argumento booleano a una funcion, porque esto indicaria que la funcion hace más de una cosa
 
-## 7. Validacion de datos
+## 6. Validacion de datos
 - Validar siempre las entradas del usuario.
 - Manejar adecuadamente los posibles errores.
 - Evitar asumir que los datos recibidos son correctos.
 
-## 8. Estilo para HTML
+## 7. Estilo para HTML
 - Utilizar etiquetas semánticas
 - Mantener una correcta indentación.
 - Utilizar nombres de clases descriptivos.
 - Evitar estilos en línea.
 - utilizar id para moddificaciones puntuales o integracion con Javascript
 
-## 9 .Estilo para CSS
+## 8.Estilo para CSS
 - Utilizar nombres de clases claros y consistentes.
 - Evitar reglas duplicadas.
 - Priorizar clases sobre identificadores para aplicar estilos.
-## 10. Estilo para JavaScript
+## 9. Estilo para JavaScript
 - Declarar variables con `const` cuando no cambien y `let` cuando sea necesario.
 - Minimizar el uso de variables globales. Solo deberán utilizarse cuando sea necesario para mantener el estado general de la aplicación y no exista una alternativa más adecuada.
 - Utilizar funciones reutilizables.
 - Mantener una estructura modular.
 - Utilizar identificadores en lugar de clases.
 
-## 11. Control de versiones
-- Realizar commits frecuentes y descriptivos.
-- Utilizar mensajes claros indicando qué cambio se realizó.
-- Evitar subir archivos temporales o innecesarios.
-- usar etiquetas que identifiuen claramente el estado del software (ej. `v1.0.0-stable``v2.1.0-beta`) y evitar etiquetas ambiguas.
-
-
-## 12. Revisión del código
+## 10. Revisión del código
 Antes de integrar cambios se deberá verificar que:
     - El código compile o funcione correctamente.
     - No existan errores de sintaxis.
@@ -104,37 +111,14 @@ Antes de integrar cambios se deberá verificar que:
 ---
 La revisión por pares no solo verificará la funcionalidad, sino también la limpieza del código, asegurando que se hayan eliminado nombres desinformativos, funciones excesivamente largas (ideal < 20 líneas) y cualquier duplicación innecesaria.
 
-## 13. Gestión de ramas
+## 11. Gestión de ramas
 Para facilitar el trabajo colaborativo y evitar conflictos durante el desarrollo, cada nueva funcionalidad, corrección o mejora deberá realizarse en una rama independiente.
 ### Organización de ramas
 - Se creara una rama por cada funcionalidad.
 - En caso de que el codigo este desordenado crear una rama `refractor/` especifica para limpiarlo antes de implementar codigo nuevo.
 - La rama main será la rama principal del proyecto y contendrá únicamente versiones estables y funcionales.
-- Todo el trabajo de desarrollo deberá realizarse en ramas específicas según el tipo de tarea:
-    -`feature/`-> Desarrollo de nuevas funcionalidades.
-    -`bugfix/`-> Corrección de errores detectados durante el desarrollo.
-    -`docs/`-> Modificaciones o incorporación de documentación (utilizar cuando no se pueda explicar algo a travez del codigo).
-    -`refactor/`-> Mejoras en la estructura o calidad del código sin alterar su funcionamiento.
-    -`test/`-> Creación o modificación de pruebas.
-### Convención de nombres
-Las ramas deberán seguir el siguiente formato:
 
-tipo/nombre-descriptivo
 
-Ejemplos:
-
-    - feature/registro-usuarios
-    - feature/alta-empleados
-    - bugfix/error-validacion-cedula
-    - hotfix/menu-responsive
-    - docs/estandares-codificacion
-    - refactor/optimizacion-consultas
-    - test/pruebas-formulario
----
-Cuando exista un identificador de tarea o incidencia, podrá incluirse al inicio del nombre:
-
-    - feature/15-registro-usuarios
-    - bugfix/22-error-login
 ### Flujo de trabajo
 - No se desarrollarán cambios directamente sobre `main`.
 - Cada integrante creará una rama para la tarea que tenga asignada.
@@ -142,10 +126,71 @@ Cuando exista un identificador de tarea o incidencia, podrá incluirse al inicio
 - Una vez completada la integración, la rama podrá eliminarse para mantener el repositorio limpio y organizado.
 ---
 Este esquema facilita el trabajo simultáneo entre los integrantes del equipo, mejora la trazabilidad de los cambios y reduce la posibilidad de conflictos durante las fusiones.
-### Políticas de Integración y Etiquetado: 
+### Políticas de Integración y Etiquetado:
 - **Criterio de Integración:**
 Una rama solo podrá fusionarse con main si tiene una cobertura de pruebas completa y el código ha sido refactorizado para eliminar duplicados y mejorar la legibilidad.
 - **Refactorización Obligatoria:**
 Como parte del concepto de "Terminado", cada desarrollador debe dedicar tiempo a limpiar el código antes de solicitar el merge
 - **Etiquetado:**
 Los nombres de las etiquetas deben ser precisos y seguir el estándar de versión acordado por el equipo para evitar la desinformación.
+usar etiquetas que identifiuen claramente el estado del software (ej. `v1.0.0-stable``v2.1.0-beta`) y evitar etiquetas ambiguas.
+## 12. Formato de commits
+
+Con el objetivo de mantener un historial claro y facilitar el seguimiento de cambios, todos los commits deberán seguir la convención [Conventional Commits.](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+### Estructura
+
+Cada mensaje de commit deberá respetar el siguiente formato:
+
+tipo(alcance-opcional): descripción
+---
+El alcance es opcional y permite indicar el módulo o componente afectado.
+---
+Ejemplos:
+
+feat(login): agregar validación de contraseña
+
+fix(empleados): corregir error al eliminar registros
+
+docs(estandares): actualizar documento de codificación
+
+refactor(tabla): simplificar lógica de edición
+### Tipos de commit
+- `feat`-> Agrega una nueva funcionalidad.
+- `fix`-> Corrige un error.
+- `refactor`-> Reestructura código sin modificar su comportamiento.
+- `perf`-> Mejora el rendimiento.
+- `style`-> Cambios de formato o estilo que no afectan el funcionamiento.
+- `test`-> Agrega o modifica pruebas.
+- `docs`-> Modificaciones de documentación.
+- `build`-> Cambios relacionados con dependencias o herramientas de construcción.
+- `chore`-> Tareas de mantenimiento que no encajan en las categorías anteriores.
+### Descripcion
+Descripción
+
+La descripción deberá:
+
+- Ser breve y clara.
+- Comenzar con un verbo en infinitivo.
+- Describir qué cambio se realizó.
+- Escribirse en minúsculas cuando sea posible.
+- No finalizar con punto.
+
+Ejemplos correctos:
+
+feat(empleados): agregar búsqueda por cédula
+
+fix(tabla): corregir ordenamiento de filas
+
+Ejemplos incorrectos:
+
+Cambios varios
+
+Arreglé un bug
+
+Update files
+
+### Buenas prácticas:
+- Realizar commits pequeños y enfocados en una única tarea.
+- Evitar commits que mezclen funcionalidades diferentes.
+- Escribir mensajes descriptivos que permitan comprender rápidamente el propósito del cambio.
+- Realizar commits frecuentes durante el desarrollo.
